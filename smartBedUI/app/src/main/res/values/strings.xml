@@ -7,5 +7,7 @@
     <string name="mode3">模式4</string>
     <string name="mode4">模式5</string>
     <string name="mode5">模式6</string>
+    <string name="bodyData">数据统计</string>
+    <string name="back">返回主页</string>
     <string name="title_activity_body_data">bodyData</string>
 </resources>

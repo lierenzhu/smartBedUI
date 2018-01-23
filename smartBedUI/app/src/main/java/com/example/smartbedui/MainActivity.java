@@ -2,18 +2,18 @@ package com.example.smartbedui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,14 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         FloatingActionButton toBodyData = (FloatingActionButton)findViewById(R.id.toBodyData);
         toBodyData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Button button3=(Button)findViewById(R.id.button3);
         Button button4=(Button)findViewById(R.id.button4);
         Button button5=(Button)findViewById(R.id.button5);
+        final ImageButton voiceButton=(ImageButton)findViewById(R.id.imageButton);
         final ImageView imageView=(ImageView)findViewById(R.id.imageView);
 
         button0.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +46,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"You have chosen MODE1",Toast.LENGTH_SHORT).show();
                 imageView.setImageResource(R.mipmap.bed1);
+            }
+        });
+        voiceButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction()==MotionEvent.ACTION_DOWN){
+                    voiceButton.setImageResource(R.mipmap.voice0onpresed);}
+                else if (event.getAction()==MotionEvent.ACTION_UP){
+                    voiceButton.setImageResource(R.mipmap.voice);
+                }
+                return false;
             }
         });
     }

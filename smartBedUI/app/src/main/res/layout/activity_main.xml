@@ -36,6 +36,7 @@
             android:id="@+id/toBodyData"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            fab:fab_title="bodyData"/>
+            app:fab_icon="@mipmap/data"
+            app:fab_title="@string/bodyData"/>
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </android.support.design.widget.CoordinatorLayout>
