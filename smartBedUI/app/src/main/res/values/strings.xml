@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">smartBedUI</string>
+    <string name="action_settings">Settings</string>
+    <string name="mode0">模式1</string>
+    <string name="mode1">模式2</string>
+    <string name="mode2">模式3</string>
+    <string name="mode3">模式4</string>
+    <string name="mode4">模式5</string>
+    <string name="mode5">模式6</string>
+    <string name="title_activity_body_data">bodyData</string>
+</resources>
